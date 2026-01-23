@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Doom Blocker Settings</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      min-height: 100vh;
+      padding: 20px;
+    }
+
+    .container {
+      max-width: 600px;
+      margin: 0 auto;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+      overflow: hidden;
+    }
+
+    .header {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+      padding: 30px;
+      text-align: center;
+    }
+
+    .header h1 {
+      font-size: 28px;
+      margin-bottom: 8px;
+    }
+
+    .header p {
+      opacity: 0.9;
+      font-size: 14px;
+    }
+
+    .content {
+      padding: 30px;
+    }
+
+    .site-list {
+      list-style: none;
+    }
+
+    .site-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px;
+      border-bottom: 1px solid #e5e7eb;
+      transition: background-color 0.2s;
+    }
+
+    .site-item:last-child {
+      border-bottom: none;
+    }
+
+    .site-item:hover {
+      background-color: #f9fafb;
+    }
+
+    .site-info {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      flex: 1;
+    }
+
+    .site-icon {
+      width: 32px;
+      height: 32px;
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      color: white;
+      font-size: 14px;
+    }
+
+    .site-name {
+      font-size: 16px;
+      font-weight: 500;
+      color: #1f2937;
+    }
+
+    .toggle-switch {
+      position: relative;
+      width: 52px;
+      height: 28px;
+    }
+
+    .toggle-switch input {
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
+
+    .slider {
+      position: absolute;
+      cursor: pointer;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: #cbd5e1;
+      transition: 0.3s;
+      border-radius: 28px;
+    }
+
+    .slider:before {
+      position: absolute;
+      content: "";
+      height: 22px;
+      width: 22px;
+      left: 3px;
+      bottom: 3px;
+      background-color: white;
+      transition: 0.3s;
+      border-radius: 50%;
+    }
+
+    input:checked + .slider {
+      background-color: #667eea;
+    }
+
+    input:checked + .slider:before {
+      transform: translateX(24px);
+    }
+
+    .save-button {
+      width: 100%;
+      padding: 14px;
+      margin-top: 30px;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .save-button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+    }
+
+    .save-button:active {
+      transform: translateY(0);
+    }
+
+    .save-message {
+      margin-top: 15px;
+      padding: 12px;
+      background-color: #d1fae5;
+      color: #065f46;
+      border-radius: 6px;
+      text-align: center;
+      display: none;
+      font-size: 14px;
+    }
+
+    .save-message.show {
+      display: block;
+    }
+
+    .icon-twitter { background-color: #1da1f2; }
+    .icon-facebook { background-color: #1877f2; }
+    .icon-instagram { background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); }
+    .icon-reddit { background-color: #ff4500; }
+    .icon-linkedin { background-color: #0077b5; }
+    .icon-tiktok { background-color: #000000; }
+    .icon-youtube { background-color: #ff0000; }
+    .icon-pinterest { background-color: #bd081c; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>🚫 Doom Blocker</h1>
+      <p>Control infinite scrolling on your favorite sites</p>
+    </div>
+    <div class="content">
+      <ul class="site-list" id="siteList">
+        <li class="site-item">
+          <div class="site-info">
+            <div class="site-icon icon-linkedin">in</div>
+            <span class="site-name">LinkedIn</span>
+          </div>
+          <label class="toggle-switch">
+            <input type="checkbox" data-site="linkedin" checked>
+            <span class="slider"></span>
+          </label>
+        </li>
+      </ul>
+      <button class="save-button" id="saveButton">Save Settings</button>
+      <div class="save-message" id="saveMessage">Settings saved successfully!</div>
+    </div>
+  </div>
+  <script src="options.js"></script>
+</body>
+</html>
