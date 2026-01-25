@@ -1,29 +1,16 @@
-// LinkedIn Feed Remover v2 - based on mainFeed
 (function () {
-  'use strict';
-
-  if (window.__LI_FEED_REMOVER__) return;
-  window.__LI_FEED_REMOVER__ = true;
-
-  function removeMainFeed() {
+  function hideFeed() {
     const feed = document.querySelector('[data-testid="mainFeed"]');
     if (feed) {
-      feed.remove();
-      console.debug('[LI Feed Remover] mainFeed container removed');
+      feed.style.display = 'none';
+      console.log('LinkedIn feed hidden');
     }
   }
 
-  // Initial removal
-  removeMainFeed();
+  // Run once
+  hideFeed();
 
-  // Observe DOM mutations in case React re-adds the feed
-  const observer = new MutationObserver(() => {
-    removeMainFeed();
-  });
-
-  observer.observe(document.documentElement, {
-    childList: true,
-    subtree: true,
-  });
-
+  // LinkedIn dynamically reloads content, so watch for changes
+  const observer = new MutationObserver(hideFeed);
+  observer.observe(document.body, { childList: true, subtree: true });
 })();

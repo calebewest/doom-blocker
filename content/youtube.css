@@ -1,0 +1,10 @@
+/* Hide the recommendations column */
+#secondary-inner {
+  display: none !important;
+}
+
+/* Expand the video player area */
+#primary {
+  width: 100% !important;
+  max-width: 100% !important;
+}
