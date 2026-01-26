@@ -1,10 +1,24 @@
-/* Hide the recommendations column */
+/* Hide right-side recommendations */
 #secondary-inner {
   display: none !important;
 }
 
-/* Expand the video player area */
+/* Expand video player */
 #primary {
   width: 100% !important;
   max-width: 100% !important;
+  flex: 1 1 100% !important;
 }
+
+#shorts-panel-container {
+  display: none !important;
+}
+
+#shorts-inner-container {
+  display: none !important;
+}
+
+#ytd-reel-shelf-renderer {
+  display: none !important;
+}
+
