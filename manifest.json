@@ -4,6 +4,15 @@
   "version": "1.2",
   "description": "Blocks distracting feeds on YouTube and LinkedIn",
 
+  "permissions": ["storage"],
+
+  "applications": {
+  "gecko": {
+    "id": "feedhider@caleb",
+    "strict_min_version": "42.0"
+  }
+},
+
   "browser_action": {
     "default_popup": "popup/popup.html",
     "default_title": "Feed Hider Active"
