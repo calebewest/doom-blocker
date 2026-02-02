@@ -64,7 +64,7 @@ The roadmap includes expanding Feed Hider to block doomscroll feeds on additiona
 
 ## Suggestions
 
-Email suggested additions to `calebewest[at]outlook.com` or open an issue. I'd love to hear your thoughts!
+If you want to stay updated or suggest changes please send me an email `calebewest[at]outlook.com` or open an issue. I'd love to hear your thoughts!
 
 ## Development
 
