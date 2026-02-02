@@ -2,7 +2,7 @@
 
 A browser extension that blocks infinite scroll feeds on major websites to help you stay focused and reduce doomscrolling.
 
-## 🎯 What It Does
+## What It Does
 
 Doom Blocker removes distracting infinite scroll feeds from websites, helping you maintain better focus and productivity. Currently supports:
 
@@ -11,7 +11,7 @@ Doom Blocker removes distracting infinite scroll feeds from websites, helping yo
 
 The extension works silently in the background and includes a popup panel showing when it's active with a toggle button to enable/disable the blocking.
 
-## 📥 How to Download and Use
+## How to Download and Use
 
 ### Installation
 
@@ -42,7 +42,7 @@ The extension works silently in the background and includes a popup panel showin
 - Use the "Toggle Feature" button to enable/disable the blocker
 - Your preference is saved automatically
 
-## 🚀 Future Steps
+## Future Steps
 
 The roadmap includes expanding Feed Hider to block doomscroll feeds on additional major platforms:
 
@@ -62,7 +62,11 @@ The roadmap includes expanding Feed Hider to block doomscroll feeds on additiona
 - Support for additional social media platforms based on user feedback
 - 
 
-## 🛠️ Development
+## Suggestions
+
+Email suggested additions to `calebewest[at]outlook.com` or open an issue. I'd love to hear your thoughts!
+
+## Development
 
 ### Project Structure
 ```
